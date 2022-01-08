@@ -83,6 +83,8 @@ const MainPage = () => {
                     onChange={(e) => setMentee(e.currentTarget.checked)}
                 />
             </div>
+            <input type='submit' value='Create Account' className='button' />
+
         </form>
     )
 }
