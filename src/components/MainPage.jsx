@@ -8,6 +8,8 @@ const MainPage = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPass, setconfirmPass] = useState('')
+    const [mentor, setMentor] = useState(false)
+    const [mentee, setMentee] = useState(false)
 
     // takes in event object that prevents submitting nothing 
     const onSubmit = (e) => {
@@ -30,22 +32,7 @@ const MainPage = () => {
         setconfirmPass('')
 
     }
-    const [values, setValues] = React.useState({
-        password: "",
-        showPassword: false,
-      });
 
-    const handleClickShowPassword = () => {
-        setValues({ ...values, showPassword: !values.showPassword });
-      };
-      
-      const handleMouseDownPassword = (event) => {
-        event.preventDefault();
-      };
-      
-      const handlePasswordChange = (prop) => (event) => {
-        setValues({ ...values, [prop]: event.target.value });
-      };
 
     return (
         <form className='add-form' onSubmit={onSubmit} >
@@ -82,6 +69,18 @@ const MainPage = () => {
                 <input type="password" placeholder='Confirm Password'
                     value={confirmPass} onChange={(e) => setconfirmPass(e.target.value)}
 
+                />
+            </div>
+            <div className='form-control form-control-check'>
+                <label>Mentor </label>
+                <input type='checkBox'
+                    onChange={(e) => setMentor(e.currentTarget.checked)}
+                />
+            </div>
+            <div className='form-control form-control-check'>
+                <label>Mentee </label>
+                <input type='checkBox'
+                    onChange={(e) => setMentee(e.currentTarget.checked)}
                 />
             </div>
             <input type='submit' value='Create Account' className='button btn-block' />
