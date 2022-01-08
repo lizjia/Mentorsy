@@ -17,12 +17,12 @@ const MainPage = () => {
         e.preventDefault()
 
         // validate if text is there 
-        if (!first || !last) {
-            alert('Please enter your name')
+        if (!first || !last || !email || !password) {
+            alert('Please ensure that all your information is entered.')
             return
         }
 
-       // onAdd({ first, last, email })
+        // onAdd({ first, last, email })
 
         // clear the form 
         setFirst(``)
@@ -83,7 +83,6 @@ const MainPage = () => {
                     onChange={(e) => setMentee(e.currentTarget.checked)}
                 />
             </div>
-            <input type='submit' value='Create Account' className='button btn-block' />
         </form>
     )
 }

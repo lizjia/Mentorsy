@@ -18,7 +18,7 @@ body {
 }
 
 .form-control {
-  margin: 20px 0;
+  margin: 15px 0;
   background-color: white;
 }
 .form-control label {
@@ -50,14 +50,15 @@ body {
 }
 
 .button {
-  color: white;
-  background: blue;
+  color: black;
+  background: white;
   display: inline-block;
-  border: none;
+  border:1px solid black;
+  width: 485px;
   padding: 20px 20px;
   margin: 5px;
   border-radius: 5px;
-  font-size: 15px;
+  font-size: 20px;
   font-family: inherit;
 
 }
@@ -82,6 +83,15 @@ body {
   padding: 30px;
   border-radius: 40px;
   background-color: white;
+}
+
+.center {
+  max-width: 500px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 800px;
+  border: none;
+  border-radius: 40px;
 }
 
 .header {
