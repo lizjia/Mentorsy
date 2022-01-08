@@ -13,7 +13,9 @@ Mentorsy uses a matching algorithm to match mentors with mentees of similar inte
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 ` npm install react-bootstrap bootstrap@5.1.3 `
+`npm install reactjs-popup --save `
 
 ### Available Scripts
 
