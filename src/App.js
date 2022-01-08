@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import MainPage from './components/MainPage';
 
-const App =() => {
+const App = () => {
+
   return (
-    <div className="App">
-
-    </div>
+    <header className="container">
+      <MainPage />
+    </header>
   );
 }
 
