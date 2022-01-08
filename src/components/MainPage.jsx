@@ -1,10 +1,13 @@
 import { useState } from "react"
+import React from "react"
 
 const MainPage = () => {
     // own component level state 
     const [first, setFirst] = useState('')
     const [last, setLast] = useState('')
     const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [confirmPass, setconfirmPass] = useState('')
 
     // takes in event object that prevents submitting nothing 
     const onSubmit = (e) => {
@@ -23,8 +26,26 @@ const MainPage = () => {
         setFirst(``)
         setLast(``)
         setEmail(``)
+        setPassword('')
+        setconfirmPass('')
 
     }
+    const [values, setValues] = React.useState({
+        password: "",
+        showPassword: false,
+      });
+
+    const handleClickShowPassword = () => {
+        setValues({ ...values, showPassword: !values.showPassword });
+      };
+      
+      const handleMouseDownPassword = (event) => {
+        event.preventDefault();
+      };
+      
+      const handlePasswordChange = (prop) => (event) => {
+        setValues({ ...values, [prop]: event.target.value });
+      };
 
     return (
         <form className='add-form' onSubmit={onSubmit} >
@@ -46,6 +67,20 @@ const MainPage = () => {
                 <label> Email </label>
                 <input type='text' placeholder='Add Email'
                     value={email} onChange={(e) => setEmail(e.target.value)}
+
+                />
+            </div>
+            <div className='form-control'>
+                <label> Password </label>
+                <input type='password' placeholder='Password'
+                    value={password} onChange={(e) => setPassword(e.target.value)}
+
+                />
+            </div>
+            <div className='form-control'>
+                <label> Confirm Password </label>
+                <input type="password" placeholder='Confirm Password'
+                    value={confirmPass} onChange={(e) => setconfirmPass(e.target.value)}
 
                 />
             </div>
