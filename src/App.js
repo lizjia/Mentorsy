@@ -1,6 +1,5 @@
 import './App.css';
 import MainPage from './pages/MainPage';
-import { Navigation } from './components/navigation';
 import {BrowserRouter, Route, Routes, Link, Outlet} from "react-router-dom";
 import React, { Component } from 'react'; 
 import 'bootstrap/dist/css/bootstrap.min.css';

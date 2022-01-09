@@ -87,7 +87,6 @@ const MainPage = () => {
                             />
                         </div>
                         <input type='submit' value='Create Account' className='button' />
-
                     </form>
 
                 </div>
