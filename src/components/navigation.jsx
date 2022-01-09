@@ -3,32 +3,18 @@ import Popup from 'reactjs-popup';
 import Login from "./login";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Modal = () => (
-  <Popup trigger={<button className="navbar-button"> Log in </button>} position="bottom centre">
-    {close => (
-      <div>
-        <Login />
-        <a className="close" onClick={close}>
-          &times;
-        </a>
-      </div>
-    )}
-  </Popup>
-);
 
  const Navigation = (props) => {
   return (
     <nav id='menu' className='navbar navbar-default navbar-fixed-top'>
       <div class="row">
-        <div class="col-md-4">
-          <img src="icon.png" />
-          <a className='navbar-brand page-scroll'>
-            Mentorsy
-          </a>
+          <logo src="icon.png" />
+          <h1> Mentorsy</h1>
         </div>
-        <div class="col-md-4 offset-md-12">
-          <Modal />
-          <div id="popup-root" /></div>
+        <div class="col-md-1 align-right">
+          <right>
+          <button className="navbar-button"> Log in </button>
+          </right>
       </div>
     </nav>
   )
