@@ -2,6 +2,7 @@ import image from '../res/photo.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FiSettings } from 'react-icons/fi';
 import { TiPencil } from 'react-icons/ti'
+import userRoutes from '../../../Backend/routes/user';
 
 
 const Profile = () => {
@@ -15,7 +16,7 @@ const Profile = () => {
           <center>
             <img src={image} alt="User Image"></img>
             </center>
-            <h1> Lisa Jia</h1>
+            <h1></h1>
             <h6> Student at Western University</h6>
           </div>
           <div class="col-sm"></div>
