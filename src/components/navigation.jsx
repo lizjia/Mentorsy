@@ -16,7 +16,7 @@ const Modal = () => (
   </Popup>
 );
 
-export const Navigation = (props) => {
+ const Navigation = (props) => {
   return (
     <nav id='menu' className='navbar navbar-default navbar-fixed-top'>
       <div class="row">
@@ -26,10 +26,12 @@ export const Navigation = (props) => {
             Mentorsy
           </a>
         </div>
-        <div class="col-md-4 offset-md-4">
+        <div class="col-md-4 offset-md-12">
           <Modal />
           <div id="popup-root" /></div>
       </div>
     </nav>
   )
 }
+
+export default Navigation

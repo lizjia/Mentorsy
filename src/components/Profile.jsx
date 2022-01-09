@@ -1,16 +1,19 @@
-import photo from '../res/photo.JPG'
+import photo from '../res/photo.png'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const Profile = () => {
     return (
-<<<<<<< Updated upstream
-        <img src={photo} alt="Logo">
-            Hello
-        </img>
-=======
-        <div>
-            <img src = 'photo.JPG'> </img>
+        <div class = "d-flex justify-content-around">
+        
+        <div class="row">
+            <div class="col-4">
+            <img src={photo} alt="User Photo" size = '96 x 6'></img>
+            <h2> Lisa</h2>
+            </div>
         </div>
->>>>>>> Stashed changes
+    </div>
+
     )
 }
 
