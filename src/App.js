@@ -19,7 +19,6 @@ const App = () => {
         {/* <Route path ="" element = {}/> */}
         </Routes>
     </BrowserRouter>
-    <Profile/>
     </div>
   );
 }
