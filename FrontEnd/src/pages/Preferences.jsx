@@ -7,16 +7,26 @@ import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 
 const Preferences = () => {
 
+    const [info, setInfo] = useState(false);
+
+    function saveInfo(){
+        alert("Info saved!");
+        window.location.reload(true)
+        sessionStorage.setItem("biography", document.getElementById("bio").value)
+        sessionStorage.setItem("work", document.getElementById("work").value)
+        sessionStorage.setItem("title", document.getElementById("title").value)
+        sessionStorage.setItem("school", document.getElementById("school").value)
+        sessionStorage.setItem("education", document.getElementById("education").value)
+        sessionStorage.setItem("hometown", document.getElementById("hometown").value)
+
+        window.location.href= '/profile';
+    }
+
     const [isSwitchOn, setIsSwitchOn] = useState(false);
 
     const onSwitchAction = () => {
       setIsSwitchOn(!isSwitchOn);
     };
-
-    function infoSaved(){
-        alert("Info saved!");
-        window.location.reload(true)
-    }
 
 
     return ( 
@@ -36,7 +46,7 @@ const Preferences = () => {
                                         onlabel='Visible'
                                         offlabel='Not Visible'
                                         onChange={onSwitchAction}/>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                                    <textarea class="form-control" id="work" rows="1"></textarea>
                                 </div>
                                 <div class="row">
                                     <label for="text1" class="font-weight-bold">Job Title</label>
@@ -45,7 +55,7 @@ const Preferences = () => {
                                         onlabel='Visible'
                                         offlabel='Not Visible'
                                         onChange={onSwitchAction}/>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                                    <textarea class="form-control" id="title" rows="1"></textarea>
                                 </div>
                                 <div class="row">
                                     <label for="text1" class="font-weight-bold">School</label>
@@ -54,7 +64,7 @@ const Preferences = () => {
                                         onlabel='Visible'
                                         offlabel='Not Visible'
                                         onChange={onSwitchAction}/>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                                    <textarea class="form-control" id="school" rows="1"></textarea>
                                 </div>
                                 <div class="row">
                                     <label for="text1" class="font-weight-bold">Education Level</label>
@@ -63,7 +73,7 @@ const Preferences = () => {
                                         onlabel='Visible'
                                         offlabel='Not Visible'
                                         onChange={onSwitchAction}/>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                                    <textarea class="form-control" id="education" rows="1"></textarea>
                                 </div>
                                 <div class="row">
                                     <label for="text1" class="font-weight-bold">Hometown</label>
@@ -72,7 +82,7 @@ const Preferences = () => {
                                         onlabel='Visible'
                                         offlabel='Not Visible'
                                         onChange={onSwitchAction}/>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                                    <textarea class="form-control" id="hometown" rows="1"></textarea>
                                 </div>
                                 
                             </div>
@@ -82,7 +92,7 @@ const Preferences = () => {
                         </form>    
                     </div>    
                         <center>
-                        <Button outline class="btn btn-light" size="lg" block>Save</Button>
+                        <Button onClick = {event => saveInfo()} outline class="btn btn-light" size="lg" block>Save</Button>
                         </center>
                 </div>
                 <div class = "col-1">
@@ -103,14 +113,14 @@ const Preferences = () => {
                             <div class="form-group">
                                 <div class="row">
                                     <label for="text1" class="font-weight-bold">Bio</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                                    <textarea class="form-control" id="bio" rows="2"></textarea>
                                 </div>
                             </div>
                             
                             <div class="form-group">
                                 <div class="row">
                                     <label for="text1" class="font-weight-bold">Tags</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                                    <textarea class="form-control" id="tags" rows="2"></textarea>
                                 </div>
                             </div>
                         </div>

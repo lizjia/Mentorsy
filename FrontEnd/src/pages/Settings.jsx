@@ -1,11 +1,21 @@
 import { Container } from "reactstrap";
+import { useNavigate } from "react-router";
 
 const Settings = () => {
+
+    let navigate = useNavigate();
+
+
+    function profile() {
+        navigate('/profile');
+    };
+
     return ( 
         <div>
             <Container>
                 <form>
                     <div class="form-group">
+                        <h1>Edit Information</h1>
                         <label for="exampleInputEmail1">Email address</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
                         {/* <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> */}
@@ -32,6 +42,7 @@ const Settings = () => {
                     
                     </div>
                     <center>
+                        <button  class="btn btn-light mt-1 mr-3"  onClick = {profile}>Back</button>
                         <button type="submit" class="btn btn-primary mt-1">Submit</button>
                     </center>
                     </form>

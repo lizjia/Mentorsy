@@ -2,10 +2,12 @@ import image from '../res/photo.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FiSettings } from 'react-icons/fi';
 import { TiPencil } from 'react-icons/ti'
-import userRoutes from '../../../Backend/routes/user';
+import axios from "axios";
 
 
 const Profile = () => {
+  console.log(sessionStorage.getItem("biography"))
+
   return (
 
     <div class="align-middle">
@@ -16,8 +18,8 @@ const Profile = () => {
           <center>
             <img src={image} alt="User Image"></img>
             </center>
-            <h1></h1>
-            <h6> Student at Western University</h6>
+            <h1>{sessionStorage.getItem("name")}</h1>
+            <h6> {sessionStorage.getItem("biography")}</h6>
           </div>
           <div class="col-sm"></div>
         </div>
