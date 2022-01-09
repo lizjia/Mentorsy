@@ -7,6 +7,7 @@ const App = () => {
 
   return (
     <div>
+      
       <Navigation />
       <header className="center">
         <div className="container">
