@@ -12,7 +12,6 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: white;
 }
-
 .add-form {
   margin-bottom: 40px;
   background-color: white;
@@ -52,10 +51,10 @@ body {
 
 .button {
   color: black;
-  background: #8AC6D1;
+  background-color: #8AC6D1;
   display: inline-block;
   border:1px solid black;
-  width: 440px;
+  width: 470px;
   padding: 20px 20px;
   margin: 5px;
   border-radius: 5px;
@@ -75,6 +74,25 @@ body {
   display: block;
   width: 100%;
 }
+.button-round {
+  background-color: #FFF4E0;
+  color: #8AC6D1;
+  border: 3px solid #8AC6D1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  font-family: inherit;
+  padding: 10px; 
+}
+
+.button-round::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
 .container {
   max-width: 500px;
   margin: 30px auto;
@@ -102,9 +120,20 @@ body {
   margin-bottom: 20px;
 }
 
-.h2 {
-  align-items: center;
+h1 {
+  color: #8AC6D1;
+text-align: center;
 }
+
+h6 {
+  text-align: center;
+}
+
+h5 {
+  text-align: center;
+  color:#8AC6D1 ;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -167,13 +196,10 @@ code {
   background-color: transparent;
 }
 
-
-
-=======
 img{
   border-radius: 8px;
   width: 150px;
-  height: 100px;
+  height: 150px;
 }
 
 .bootstrap-tagsinput {
