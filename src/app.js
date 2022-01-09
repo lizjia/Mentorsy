@@ -1,22 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
 import MainPage from './components/MainPage';
-import Button from './components/Button';
-import Preferences from './pages/Preferences';
-import Settings from './pages/Settings';
+import { Navigation } from './components/navigation';
 
 const App = () => {
 
   return (
     <div>
-     {/* <header className = "center">
-     <div className="container"> */}
-      {/* <MainPage /> */}
-      {/* <Preferences/> */}
-      <Settings/> 
-     {/* </div> */}
-     {/* <Button className = 'button' color = 'white' text = 'Create Account'/> */}
-     {/* </header> */}
+      <Navigation />
+      <header className="center">
+        <div className="container">
+          <MainPage />
+        </div>
+      </header>
     </div>
   );
 }
