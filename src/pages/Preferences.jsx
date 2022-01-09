@@ -2,7 +2,6 @@ import {Card,CardBody,Container, Col,Button, Row , Form, FormCheck} from "reacts
 import Image from '../res/emily.JPG';
 import {React, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CustomButton from '../components/Button';
 import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 
 
