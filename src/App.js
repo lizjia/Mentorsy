@@ -1,6 +1,7 @@
 import './App.css';
 import MainPage from './components/MainPage';
 import { Navigation } from './components/navigation';
+import Profile  from './components/Profile';
 
 const App = () => {
 
