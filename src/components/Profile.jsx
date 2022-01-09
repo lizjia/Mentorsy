@@ -1,10 +1,11 @@
+import photo from '../res/photo.JPG'
+
 const Profile = () => {
     return (
-        <div>
-            <img src = './public/imgs/photo.jpg'> </img>
-
-        </div>
+        <img src={photo} alt="Logo">
+            Hello
+        </img>
     )
 }
 
-export default profile 
+export default Profile 
