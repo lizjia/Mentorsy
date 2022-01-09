@@ -3,8 +3,7 @@ import Login from "./login";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LoginForm from "../pages/LoginForm";
 
-
- const Navigation = (props) => {
+const Navigation = (props) => {
   return (
     <nav id='menu' className='navbar navbar-default navbar-fixed-top'>
       <div class="row">
