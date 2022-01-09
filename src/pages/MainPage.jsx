@@ -1,6 +1,6 @@
 import { useState } from "react"
 import React from "react"
-import Navigation from './navigation';
+import Navigation from '../components/navigation';
 
 const MainPage = () => {
     // own component level state 

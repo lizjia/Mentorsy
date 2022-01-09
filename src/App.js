@@ -1,5 +1,4 @@
 import './App.css';
-import MainPage from './components/MainPage';
 import Profile from './components/Profile';
 import MainPage from './pages/MainPage';
 import { Navigation } from './components/navigation';
